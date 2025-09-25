@@ -8,11 +8,10 @@ export async function CTASection() {
 	const t = await getTranslations('pages.home.cta');
 
 	return (
-		<section className='container mt-36 flex flex-col items-center'>
+		<section className='container mt-16 flex flex-col items-center sm:mt-24 md:mt-36'>
 			<h2 className='text-4xl leading-normal font-semibold'>{t('title')}</h2>
-			<p className='mt-3 text-xl text-gray-500'>{t('description')}</p>
-
-			<div className='mt-10 flex w-full max-w-2xl gap-5'>
+			<p className='mt-3 text-center text-xl text-gray-500'>{t('description')}</p>
+			<div className='mt-10 flex w-full max-w-2xl flex-wrap justify-center gap-5 md:flex-nowrap'>
 				<ShinyInput inputProps={{ placeholder: t('input.placeholder') }}></ShinyInput>
 
 				<Button
@@ -31,7 +30,6 @@ export async function CTASection() {
 					</a>
 				</Button>
 			</div>
-
 			<p className='mt-5 text-sm text-gray-500'>{t('privacy')}</p>
 		</section>
 	);

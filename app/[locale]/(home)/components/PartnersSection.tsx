@@ -4,8 +4,8 @@ export async function PartnersSection() {
 	const t = await getTranslations('pages.home.partners');
 
 	return (
-		<section className='group relative container mt-36'>
-			<div className='grid grid-cols-5 gap-4 group-hover:blur-md'>
+		<section className='group relative container mt-16 sm:mt-24 md:mt-36'>
+			<div className='grid grid-cols-2 gap-4 group-hover:blur-md sm:grid-cols-5'>
 				{Array.from({ length: 10 }).map((_, index) => (
 					<div
 						// biome-ignore lint/suspicious/noArrayIndexKey: TEMP

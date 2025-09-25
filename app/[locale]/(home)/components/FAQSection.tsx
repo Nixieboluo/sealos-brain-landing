@@ -6,7 +6,7 @@ export async function FAQSection() {
 	const t = await getTranslations('pages.home.faq');
 
 	return (
-		<section className='container mt-60 flex'>
+		<section className='container mt-40 grid grid-cols-1 gap-6 sm:mt-48 md:mt-60 lg:grid-cols-2'>
 			<h2 className='w-full text-4xl font-medium'>
 				<div className='flex items-baseline'>
 					<span>

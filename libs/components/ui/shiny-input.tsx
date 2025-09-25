@@ -7,9 +7,10 @@ import { Input } from './input';
 
 export type ShinyInputProps = {
 	inputProps?: React.ComponentProps<typeof Input>;
+	className?: string;
 };
 
-export function ShinyInput({ inputProps }: ShinyInputProps) {
+export function ShinyInput({ inputProps, className }: ShinyInputProps) {
 	const [focused, setFocused] = React.useState(false);
 	const color = 'var(--color-blue-600)';
 
@@ -96,7 +97,7 @@ export function ShinyInput({ inputProps }: ShinyInputProps) {
 	return (
 		// biome-ignore lint/a11y/noStaticElementInteractions: This is for vfx only
 		<div
-			className='relative w-full'
+			className={cn('relative w-full', className)}
 			onFocus={() => setFocused(true)}
 			onBlur={() => setFocused(false)}
 		>

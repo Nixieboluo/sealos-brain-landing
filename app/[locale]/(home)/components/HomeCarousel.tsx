@@ -8,7 +8,7 @@ import { Carousel } from '@/libs/components/ui/carousel';
 export function HomeCarousel({ children }: { children: React.ReactNode }) {
 	return (
 		<Carousel
-			className='w-full relative'
+			className='relative w-full'
 			opts={{
 				align: 'start',
 				containScroll: 'keepSnaps',
@@ -21,8 +21,8 @@ export function HomeCarousel({ children }: { children: React.ReactNode }) {
 				WheelGesturesPlugin(),
 			]}
 		>
-			<div className='bg-gradient-to-r from-background to-transparent absolute left-0 top-0 h-full w-20 z-10' />
-			<div className='bg-gradient-to-l from-background to-transparent absolute right-0 top-0 h-full w-20 z-10' />
+			<div className='from-background absolute top-0 left-0 z-10 h-full w-20 bg-gradient-to-r to-transparent' />
+			<div className='from-background absolute top-0 right-0 z-10 h-full w-20 bg-gradient-to-l to-transparent' />
 			{children}
 		</Carousel>
 	);

@@ -9,7 +9,7 @@ export async function WhoSection() {
 	const t = await getTranslations('pages.home.who');
 
 	return (
-		<section className='container mt-36 mb-24'>
+		<section className='container mt-16 mb-24 sm:mt-24 md:mt-36'>
 			<h2 className='flex items-baseline text-4xl font-medium'>
 				<span>
 					<span className='text-blue-600'>{t('title.who')}</span>
@@ -19,7 +19,7 @@ export async function WhoSection() {
 			</h2>
 			<div className='mt-2 text-gray-500'>{t('description')}</div>
 
-			<div className='mt-10 flex items-stretch gap-6'>
+			<div className='mt-10 grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3'>
 				<div className='relative w-full flex-1'>
 					<div className='absolute z-10 -mb-24 px-4'>
 						<Image
@@ -36,7 +36,7 @@ export async function WhoSection() {
 					</div>
 				</div>
 
-				<div className='relative w-full flex-1'>
+				<div className='relative mt-24 w-full flex-1 sm:mt-0'>
 					<div className='absolute right-0 z-10 -mb-24 px-4'>
 						<Image
 							src={FullStackTeamImage}
@@ -52,7 +52,7 @@ export async function WhoSection() {
 					</div>
 				</div>
 
-				<div className='relative -bottom-24 h-full w-full flex-1'>
+				<div className='relative -bottom-24 h-full w-full flex-1 sm:col-span-2 lg:col-span-1'>
 					<div className='flex h-full flex-col items-center justify-center gap-3 bg-gray-100 px-12 py-8 shadow-md'>
 						<Image
 							src={MorePossibilitiesImage}
