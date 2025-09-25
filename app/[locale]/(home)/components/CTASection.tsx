@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Button } from '@/libs/components/ui/button';
 import { RightArrow } from '@/libs/components/ui/sealos-icons';
 import { ShinyInput } from '@/libs/components/ui/shiny-input';
+import { Config } from '@/libs/config';
 
 export async function CTASection() {
 	const t = await getTranslations('pages.home.cta');
@@ -15,13 +16,19 @@ export async function CTASection() {
 				<ShinyInput inputProps={{ placeholder: t('input.placeholder') }}></ShinyInput>
 
 				<Button
+					asChild
 					variant='ghost'
 					className='border-foreground h-14 gap-6 rounded-full border bg-transparent px-6 pr-2 text-lg shadow-none'
 				>
-					<span>{t('button.getPriorityAccess')}</span>
-					<div className='bg-foreground flex aspect-square h-10 w-10 items-center justify-center rounded-full text-white'>
-						<RightArrow className='size-6' />
-					</div>
+					<a
+						href={Config.pages.home.cta.buttonLink}
+						target='_blank'
+					>
+						<span>{t('button.getPriorityAccess')}</span>
+						<div className='bg-foreground flex aspect-square h-10 w-10 items-center justify-center rounded-full text-white'>
+							<RightArrow className='size-6' />
+						</div>
+					</a>
 				</Button>
 			</div>
 

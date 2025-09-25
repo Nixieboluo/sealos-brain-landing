@@ -1,25 +1,20 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
-import { Carousel, CarouselContent, CarouselItem } from '@/libs/components/ui/carousel';
+import { CarouselContent, CarouselItem } from '@/libs/components/ui/carousel';
 import CarouselAlertImage from '../images/carousel-alert.svg';
 import CarouselInputImage from '../images/carousel-input.svg';
 import CarouselResourceImage from '../images/carousel-resource.svg';
 import CarouselViewImage from '../images/carousel-view.svg';
 import { CarouselCard } from './CarouselCard';
+import { HomeCarousel } from './HomeCarousel';
 
 export async function CarouselSection() {
 	const t = await getTranslations('pages.home.carousel');
 
 	return (
 		<section className='container'>
-			<Carousel
-				className='w-full'
-				opts={{
-					align: 'start',
-					containScroll: 'keepSnaps',
-				}}
-			>
-				<CarouselContent className={{ wrapper: 'overflow-visible' }}>
+			<HomeCarousel>
+				<CarouselContent className={{ wrapper: 'overflow-hidden px-20' }}>
 					<CarouselItem className='basis-2/3'>
 						<CarouselCard
 							title={t('items.input.title')}
@@ -72,7 +67,7 @@ export async function CarouselSection() {
 						</CarouselCard>
 					</CarouselItem>
 				</CarouselContent>
-			</Carousel>
+			</HomeCarousel>
 		</section>
 	);
 }
