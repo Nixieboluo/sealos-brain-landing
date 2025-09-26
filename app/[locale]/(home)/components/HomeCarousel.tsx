@@ -21,8 +21,8 @@ export function HomeCarousel({ children }: { children: React.ReactNode }) {
 				WheelGesturesPlugin(),
 			]}
 		>
-			<div className='from-background absolute top-0 left-0 z-10 h-full w-20 bg-gradient-to-r to-transparent' />
-			<div className='from-background absolute top-0 right-0 z-10 h-full w-20 bg-gradient-to-l to-transparent' />
+			<div className='from-background absolute top-0 left-0 z-10 h-full w-5 bg-gradient-to-r to-transparent md:w-20' />
+			<div className='from-background absolute top-0 right-0 z-10 h-full w-5 bg-gradient-to-l to-transparent md:w-20' />
 			{children}
 		</Carousel>
 	);

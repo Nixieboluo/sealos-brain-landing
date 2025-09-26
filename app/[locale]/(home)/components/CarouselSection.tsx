@@ -14,8 +14,8 @@ export async function CarouselSection() {
 	return (
 		<section className='container'>
 			<HomeCarousel>
-				<CarouselContent className={{ wrapper: 'overflow-hidden px-20' }}>
-					<CarouselItem className='basis-2/3'>
+				<CarouselContent className={{ wrapper: 'overflow-hidden px-5 md:px-20' }}>
+					<CarouselItem className='basis-full md:basis-2/3'>
 						<CarouselCard
 							title={t('items.input.title')}
 							description={t('items.input.description')}
@@ -28,7 +28,7 @@ export async function CarouselSection() {
 						</CarouselCard>
 					</CarouselItem>
 
-					<CarouselItem className='basis-2/3'>
+					<CarouselItem className='basis-full md:basis-2/3'>
 						<CarouselCard
 							title={t('items.view.title')}
 							description={t('items.view.description')}
@@ -41,7 +41,7 @@ export async function CarouselSection() {
 						</CarouselCard>
 					</CarouselItem>
 
-					<CarouselItem className='basis-2/3'>
+					<CarouselItem className='basis-full md:basis-2/3'>
 						<CarouselCard
 							title={t('items.resource.title')}
 							description={t('items.resource.description')}
@@ -54,7 +54,7 @@ export async function CarouselSection() {
 						</CarouselCard>
 					</CarouselItem>
 
-					<CarouselItem className='basis-2/3'>
+					<CarouselItem className='basis-full md:basis-2/3'>
 						<CarouselCard
 							title={t('items.alert.title')}
 							description={t('items.alert.description')}
