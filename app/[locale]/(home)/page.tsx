@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Footer } from '@/libs/components/Footer';
 import { Navbar } from '@/libs/components/Navbar';
+import { Config } from '@/libs/config';
 import { CarouselSection } from './components/CarouselSection';
 import { CTASection } from './components/CTASection';
 import { FAQSection } from './components/FAQSection';
@@ -39,7 +40,7 @@ export default async function HomePage() {
 			<footer className='relative'>
 				<CTASection />
 
-				<Footer />
+				<Footer config={Config.components.footer} />
 
 				<div className='pointer-events-none absolute bottom-0 w-full'>
 					<Image

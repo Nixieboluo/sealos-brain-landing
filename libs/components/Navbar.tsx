@@ -32,7 +32,7 @@ export async function Navbar() {
 				<nav className='flex items-center gap-3'>
 					<Button
 						variant='secondary'
-						className='h-10 w-28 rounded-full border-none bg-white px-4 py-2 hover:bg-white hover:shadow'
+						className='h-10 min-w-32 rounded-full border-none bg-white px-4 py-2 hover:bg-white hover:shadow'
 						asChild
 					>
 						<a
@@ -47,7 +47,7 @@ export async function Navbar() {
 						<DropdownMenuTrigger asChild>
 							<Button
 								variant='secondary'
-								className='h-10 w-28 rounded-full border-none border-black/10 bg-white px-4 py-2 hover:bg-white hover:shadow'
+								className='h-10 min-w-32 rounded-full border-none border-black/10 bg-white px-4 py-2 hover:bg-white hover:shadow'
 							>
 								<Users className='h-5 w-5 stroke-2' />
 								{t('components.navbar.buttons.community')}
