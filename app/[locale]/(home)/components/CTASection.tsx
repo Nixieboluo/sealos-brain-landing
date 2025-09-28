@@ -24,7 +24,7 @@ export async function CTASection() {
 						target='_blank'
 					>
 						<span>{t('button.getPriorityAccess')}</span>
-						<div className='bg-foreground flex aspect-square h-10 w-10 items-center justify-center rounded-full text-white'>
+						<div className='bg-foreground flex aspect-square h-10 w-10 items-center justify-center rounded-full text-white backdrop-blur-sm'>
 							<RightArrow className='size-6' />
 						</div>
 					</a>

@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Button } from '@/libs/components/ui/button';
 import { RightArrow } from '@/libs/components/ui/sealos-icons';
 import { ShinyInput } from '@/libs/components/ui/shiny-input';
+import { Config } from '@/libs/config';
 
 export async function Hero() {
 	const t = await getTranslations('pages.home.hero');
@@ -25,12 +26,15 @@ export async function Hero() {
 				/>
 				<Button
 					variant='ghost'
-					className='border-foreground h-14 gap-6 rounded-full border bg-transparent px-6 pr-2 text-xl shadow-none'
+					className='border-foreground h-14 gap-6 rounded-full border bg-transparent px-6 pr-2 text-xl shadow-none backdrop-blur-sm'
+					asChild
 				>
-					<span>{t('button.tryNow')}</span>
-					<div className='bg-foreground flex aspect-square h-10 w-10 items-center justify-center rounded-full text-white'>
-						<RightArrow className='size-6' />
-					</div>
+					<a href={Config.pages.home.hero.tryNowLink}>
+						<span>{t('button.tryNow')}</span>
+						<div className='bg-foreground flex aspect-square h-10 w-10 items-center justify-center rounded-full text-white'>
+							<RightArrow className='size-6' />
+						</div>
+					</a>
 				</Button>
 			</div>
 		</section>
