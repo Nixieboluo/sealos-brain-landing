@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { QuestionMarkIcon } from '@/libs/components/ui/sealos-icons';
-import BackendDevImage from '../images/backend-dev.svg';
-import FullStackTeamImage from '../images/full-stack-team.svg';
-import MorePossibilitiesImage from '../images/more-possibilities.svg';
+import BackendDevImage from '../images/who/backend-dev.svg';
+import FullStackTeamImage from '../images/who/full-stack-team.svg';
+import MorePossibilitiesImage from '../images/who/more-possibilities.svg';
 
 export async function WhoSection() {
 	const t = await getTranslations('pages.home.who');

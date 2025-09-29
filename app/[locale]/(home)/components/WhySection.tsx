@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { QuestionMarkIcon } from '@/libs/components/ui/sealos-icons';
-import AiTranslatorImage from '../images/ai-translator.svg';
-import NoCliffImage from '../images/no-cliff.svg';
-import VisualOrchestrationImage from '../images/visual-orchestration.svg';
+import AiTranslatorImage from '../images/why/ai-translator.svg';
+import NoCliffImage from '../images/why/no-cliff.svg';
+import VisualOrchestrationImage from '../images/why/visual-orchestration.svg';
 import { WhyUseCard } from './WhyUseCard';
 
 const Cards = async ({ orientation }: { orientation: 'vertical' | 'horizontal' }) => {

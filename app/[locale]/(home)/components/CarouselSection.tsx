@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { CarouselContent, CarouselItem } from '@/libs/components/ui/carousel';
-import CarouselAlertImage from '../images/carousel-alert.svg';
-import CarouselInputImage from '../images/carousel-input.svg';
-import CarouselResourceImage from '../images/carousel-resource.svg';
-import CarouselViewImage from '../images/carousel-view.svg';
+import CarouselAlertImage from '../images/carousel/carousel-alert.svg';
+import CarouselInputImage from '../images/carousel/carousel-input.svg';
+import CarouselResourceImage from '../images/carousel/carousel-resource.svg';
+import CarouselViewImage from '../images/carousel/carousel-view.svg';
 import { CarouselCard } from './CarouselCard';
 import { HomeCarousel } from './HomeCarousel';
 
